@@ -35,15 +35,7 @@ namespace CelengankuNative
                 }
 
                 MaintenanceStatus maintenance;
-                if (!MaintenanceService.TryRead(out maintenance))
-                {
-                    MessageBox.Show(
-                        "Status server maintenance tidak dapat diverifikasi. Celenganku tetap akan dibuka, tetapi status maintenance belum tersedia.",
-                        "Peringatan status server",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Warning);
-                    break;
-                }
+                if (!MaintenanceService.TryRead(out maintenance)) break;
 
                 if (maintenance.Enabled)
                 {

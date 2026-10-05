@@ -1,7 +1,7 @@
 $ErrorActionPreference = 'Stop'
 
 $projectDirectory = $PSScriptRoot
-$outputDirectory = Join-Path $projectDirectory 'release\single-installer-normal-app'
+$outputDirectory = Join-Path $projectDirectory 'release\no-maintenance-popup'
 $buildDirectory = Join-Path $projectDirectory 'build\native'
 $iconPath = Join-Path $projectDirectory 'app.ico'
 New-Item -ItemType Directory -Path $outputDirectory -Force | Out-Null
