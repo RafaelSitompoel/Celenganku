@@ -1,0 +1,57 @@
+# Android built outputs
+*.apk
+*.aab
+*.ap_
+*.dex
+
+# Java / Kotlin compiled files
+*.class
+*.jar (except those bundled in the project)
+
+# Build directories
+/build/
+app/build/
+
+# Android Studio / IntelliJ IDEA
+*.iml
+.idea/
+!.idea/copyright/
+.DS_Store
+
+# Gradle files
+.gradle/
+gradle.properties.local
+
+# Local config (berisi path SDK, TIDAK boleh diupload)
+local.properties
+
+# ProGuard generated files
+proguard/
+*.pro.bak
+
+# Log files
+*.log
+
+# External native build
+.externalNativeBuild/
+.cxx/
+
+# OS generated
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Keystore / signing (JANGAN pernah upload ke GitHub!)
+*.jks
+*.keystore
+release.properties
+
+# Captures dari Android Studio
+/captures/
+
+# Node / Desktop dependencies
+node_modules/
+desktop/node_modules/
+desktop/build/
+desktop/dist/
+desktop/release/

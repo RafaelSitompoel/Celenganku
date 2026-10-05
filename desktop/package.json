@@ -1,0 +1,10 @@
+{
+  "name": "celenganku-windows",
+  "version": "1.0.0",
+  "description": "Aplikasi tabungan native untuk Windows 11",
+  "scripts": {
+    "build:windows": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\\build-windows.ps1"
+  },
+  "author": "Rafael Paulus Sitompul",
+  "license": "MIT"
+}

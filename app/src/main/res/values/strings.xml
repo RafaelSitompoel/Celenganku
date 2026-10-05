@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Celenganku</string>
+    <string name="app_tagline">Rencanakan tabunganmu dengan mudah</string>
+
+    <string name="title_target">Simulasi Target Tabungan</string>
+    <string name="desc_target">Hitung berapa lama target tabunganmu akan tercapai.</string>
+    <string name="hint_target">Target tabungan</string>
+    <string name="hint_saldo">Saldo saat ini (opsional)</string>
+    <string name="hint_setoran">Nominal setoran</string>
+    <string name="label_periode">Periode setoran</string>
+
+    <string name="periode_harian_label">Harian</string>
+    <string name="periode_mingguan_label">Mingguan</string>
+    <string name="periode_bulanan_label">Bulanan</string>
+    <string name="periode_harian">harian</string>
+    <string name="periode_mingguan">mingguan</string>
+    <string name="periode_bulanan">bulanan</string>
+
+    <string name="btn_hitung">Hitung Sekarang</string>
+    <string name="btn_reset">Bersihkan Isian</string>
+
+    <string name="label_progress">Progres tabungan: %1$d%%</string>
+    <string name="result_target">Sisa yang perlu dikumpulkan: %1$s\nJumlah setoran: %2$d kali (%3$s)\nEstimasi lama: %4$s\nPerkiraan tercapai: %5$s</string>
+    <string name="result_done">Selamat! Target tabunganmu sudah tercapai.</string>
+    <string name="result_too_long">Sisa target %1$s membutuhkan waktu lebih dari 100 tahun. Coba naikkan nominal setoran.</string>
+
+    <string name="unit_year">tahun</string>
+    <string name="unit_month">bulan</string>
+    <string name="unit_day">hari</string>
+
+    <string name="title_challenge">Tantangan Menabung 52 Minggu</string>
+    <string name="desc_challenge">Menabung naik tiap minggu: minggu ke-1 sebesar nominal awal, minggu ke-2 dua kalinya, dan seterusnya.</string>
+    <string name="hint_base">Nominal minggu pertama</string>
+    <string name="btn_tantangan">Hitung Tantangan</string>
+    <string name="result_challenge">Minggu ke-1: %1$s\nMinggu ke-52: %2$s\nTotal setelah 52 minggu: %3$s</string>
+
+    <string name="error_target">Masukkan target tabungan lebih dari 0</string>
+    <string name="error_setoran">Masukkan nominal setoran lebih dari 0</string>
+    <string name="error_base">Masukkan nominal minggu pertama lebih dari 0</string>
+
+    <string name="footer_tip">Hasil bersifat estimasi. Satu bulan dihitung 30 hari.</string>
+
+    <!-- Halaman Barang Impian -->
+    <string name="title_wish">Barang Impian</string>
+    <string name="desc_wish">Pilih gambar barang yang ingin kamu beli, lalu lihat berapa setoran per bulannya.</string>
+    <string name="btn_open_wish">Buka Barang Impian</string>
+    <string name="wish_tagline">Pasang gambar impianmu sebagai motivasi</string>
+    <string name="btn_back">Kembali</string>
+    <string name="label_image_placeholder">Ketuk untuk memilih gambar</string>
+    <string name="label_image_preview">Gambar barang impian</string>
+    <string name="btn_choose_image">Pilih Gambar</string>
+    <string name="hint_wish_name">Nama barang impian</string>
+    <string name="hint_wish_price">Harga barang</string>
+    <string name="btn_show_wish">Tampilkan Impian</string>
+    <string name="btn_reset_wish">Bersihkan Impian</string>
+    <string name="result_wish">Impianmu: %1$s\nHarga: %2$s\nJika menabung 12 bulan, setoran per bulan: %3$s</string>
+    <string name="error_wish_image">Pilih gambar barang impian terlebih dahulu.</string>
+    <string name="error_wish_name">Masukkan nama barang impian</string>
+    <string name="error_wish_price">Masukkan harga barang lebih dari 0</string>
+    <string name="wish_footer">Gambar hanya ditampilkan sementara dan tidak disimpan.</string>
+
+    <!-- Splash Screen -->
+    <string name="splash_loading">Memuat aplikasi…</string>
+    <string name="splash_remaining">Sisa waktu: %1$s</string>
+    <string name="btn_skip">Lewati</string>
+    <string name="splash_marquee">Menabung sedikit demi sedikit lama-lama menjadi bukit  •  Wujudkan barang impianmu bersama Celenganku  •  Sisihkan hari ini, nikmati di masa depan  •  Konsisten adalah kunci tabungan yang berhasil  •  </string>
+
+    <!-- Administrator Mode -->
+    <string name="title_admin">Panel Administrator</string>
+    <string name="desc_admin">Akses khusus kontrol saldo, manipulasi target, dan reset tabungan.</string>
+    <string name="hint_admin_pin">PIN Administrator</string>
+    <string name="btn_login_admin">Buka Akses Admin</string>
+    <string name="btn_lock_admin">Kunci Mode Admin</string>
+    <string name="hint_admin_saldo">Atur Saldo Langsung (Rp)</string>
+    <string name="hint_admin_target">Atur Target Langsung (Rp)</string>
+    <string name="btn_apply_admin_data">Terapkan Perubahan Saldo</string>
+    <string name="btn_reset_all_data">Reset Total Data Tabungan</string>
+    <string name="btn_change_pin">Ganti PIN Administrator</string>
+    <string name="admin_status_active">👑 Akses Administrator Aktif</string>
+    <string name="error_pin_wrong">PIN Administrator salah! Default: 1234</string>
+    <string name="success_admin_login">Akses Administrator Berhasil Dibuka!</string>
+    <string name="success_admin_applied">Data saldo dan target berhasil diperbarui oleh Admin!</string>
+    <string name="success_admin_reset">Semua data berhasil dibersihkan!</string>
+
+    <!-- Halaman Catatan & Riwayat Tabungan -->
+    <string name="title_history">Jurnal &amp; Riwayat Tabungan</string>
+    <string name="desc_history">Catat setiap uang yang kamu tabung untuk memantau perkembangan finansialmu.</string>
+    <string name="btn_open_history">Buka Riwayat Tabungan</string>
+    <string name="history_tagline">Pantau riwayat setoran harianmu</string>
+    <string name="hint_history_amount">Nominal Setoran (Rp)</string>
+    <string name="hint_history_note">Keterangan / Sumber Uang (cth: Kembalian, Gaji)</string>
+    <string name="btn_add_history">Tambah Catatan Setoran</string>
+    <string name="btn_clear_history">Hapus Semua Riwayat</string>
+    <string name="label_total_history">Total Terkumpul: %1$s</string>
+    <string name="empty_history">Belum ada catatan setoran tabungan. Mulai menabung hari ini!</string>
+    <string name="error_history_amount">Masukkan nominal setoran lebih dari 0</string>
+    <string name="success_add_history">Berhasil menambahkan setoran tabungan!</string>
+    <string name="success_clear_history">Semua riwayat tabungan telah dihapus.</string>
+
+    <!-- Halaman Kalkulator Investasi & KPR Rumah -->
+    <string name="title_house">Kalkulator Properti &amp; KPR</string>
+    <string name="desc_house">Simulasi KPR, proyeksi nilai rumah, yield sewa, dan tabungan DP rumah.</string>
+    <string name="btn_open_house">Buka Kalkulator Rumah</string>
+    <string name="house_tagline">Rencanakan hunian impianmu secara matang</string>
+    <string name="title_kpr">1. Simulasi KPR Rumah</string>
+    <string name="hint_house_price">Harga Rumah (Rp)</string>
+    <string name="hint_dp_percent">Uang Muka / DP (%)</string>
+    <string name="hint_interest_rate">Bunga KPR per Tahun (%)</string>
+    <string name="hint_tenor_years">Tenor / Jangka Waktu (Tahun)</string>
+    <string name="btn_calc_kpr">Hitung Cicilan KPR</string>
+    <string name="result_kpr">Pinjaman Pokok: %1$s\nDP: %2$s\nCicilan per Bulan: %3$s\nTotal Bunga Dibayar: %4$s</string>
+
+    <string name="title_house_projection">2. Proyeksi Nilai Rumah</string>
+    <string name="hint_appreciation_rate">Asumsi Kenaikan per Tahun (%)</string>
+    <string name="btn_calc_projection">Hitung Proyeksi Harga</string>
+    <string name="result_projection">Perkiraan Harga Rumah:\n• 5 Tahun: %1$s\n• 10 Tahun: %2$s\n• 20 Tahun: %3$s</string>
+
+    <string name="title_rental_yield">3. Hitung Untung Sewa (Yield)</string>
+    <string name="hint_rental_income">Pemasukan Sewa per Tahun (Rp)</string>
+    <string name="btn_calc_yield">Hitung Yield Sewa</string>
+    <string name="result_yield">Yield Sewa Tahunan: %1$.2f%%\n(Kategori: %2$s)</string>
+
+    <string name="title_dp_saving">4. Tabungan DP Rumah</string>
+    <string name="hint_target_dp">Target Uang Muka / DP (Rp)</string>
+    <string name="hint_dp_years">Target Waktu Terkumpul (Tahun)</string>
+    <string name="btn_calc_dp_saving">Hitung Setoran DP</string>
+    <string name="result_dp_saving">Target DP: %1$s dalam %2$d tahun\n• Setoran per Bulan: %3$s\n• Setoran per Minggu: %4$s</string>
+
+    <!-- Halaman Tabungan Kasih & Ziarah -->
+    <string name="title_faith">Tabungan Katolik: Prapaskah &amp; Ziarah</string>
+    <string name="desc_faith">Celengan APP selama 40 hari Prapaskah, persembahan, ziarah, dan hari raya.</string>
+    <string name="btn_open_faith">Buka Tabungan Katolik</string>
+    <string name="faith_tagline">Sisihkan sebagian rezeki dengan sukarela &amp; penuh kasih</string>
+    <string name="daily_verse">"Setiap orang hendaklah memberi menurut kerelaan hatinya, jangan dengan sedih hati atau karena paksaan." (2 Korintus 9:7)</string>
+    <string name="title_app">1. Celengan APP (Aksi Puasa Pembangunan)</string>
+    <string name="desc_app">Komitmen 40 hari masa Prapaskah menuju Hari Raya Paskah.</string>
+    <string name="hint_app_daily">Nominal Tabungan Harian (Rp)</string>
+    <string name="btn_calc_app">Hitung Total APP</string>
+    <string name="result_app">Total Terkumpul Selama 40 Hari Prapaskah: %1$s\nSiap disalurkan untuk Aksi Puasa Pembangunan!</string>
+
+    <string name="title_offertory">2. Kalkulator Persembahan / Kolekte</string>
+    <string name="desc_offertory">Hitung porsi persembahan bulanan (patokan sukarela 1-10%).</string>
+    <string name="hint_monthly_income">Penghasilan Bulanan (Rp)</string>
+    <string name="hint_offertory_percent">Persentase Persembahan (%)</string>
+    <string name="btn_calc_offertory">Hitung Persembahan</string>
+    <string name="result_offertory">Alokasi Persembahan Bulanan: %1$s\nPer perkiraan kolekte mingguan: %2$s</string>
+
+    <string name="title_pilgrimage">3. Target Tabungan Ziarah &amp; Sakramen</string>
+    <string name="desc_pilgrimage">Persiapan ziarah (Sendangsono, Gua Maria, Lourdes, Roma) &amp; Sakramen.</string>
+    <string name="hint_pilgrimage_target">Target Biaya Ziarah/Acara (Rp)</string>
+    <string name="hint_target_months">Target Waktu (Bulan)</string>
+    <string name="btn_calc_pilgrimage">Hitung Tabungan Ziarah</string>
+    <string name="result_pilgrimage">Tujuan: %1$s\nSetoran per Bulan: %2$s\nPer setoran mingguan: %3$s</string>
+
+    <string name="title_holiday">4. Tabungan Hari Raya Natal &amp; Paskah</string>
+    <string name="hint_holiday_target">Target Dana Hari Raya (Rp)</string>
+    <string name="btn_calc_holiday">Hitung Tabungan Hari Raya</string>
+    <string name="result_holiday">Target Dana: %1$s\n• Setoran per Bulan: %2$s\n• Setoran per Minggu: %3$s</string>
+
+    <!-- Halaman Alat Finansial (Dana Darurat & Inflasi) -->
+    <string name="title_financial_tools">Dana Darurat &amp; Inflasi</string>
+    <string name="desc_financial_tools">Hitung kecukupan dana darurat dan proyeksi kenaikan harga akibat inflasi.</string>
+    <string name="btn_open_financial_tools">Buka Alat Finansial</string>
+    <string name="financial_tagline">Jaga ketahanan finansial keluarga dari risiko &amp; inflasi</string>
+    <string name="title_emergency_fund">1. Kalkulator Dana Darurat</string>
+    <string name="hint_monthly_expense">Pengeluaran Rutin Bulanan (Rp)</string>
+    <string name="btn_calc_emergency">Hitung Dana Darurat</string>
+    <string name="result_emergency">Rekomendasi Dana Darurat:\n• Single (3 Bulan): %1$s\n• Menikah (6 Bulan): %2$s\n• Berkeluarga (12 Bulan): %3$s</string>
+
+    <string name="title_inflation">2. Kalkulator Inflasi Nilai Uang</string>
+    <string name="hint_present_value">Nilai Uang Sekarang (Rp)</string>
+    <string name="hint_inflation_rate">Asumsi Inflasi per Tahun (%)</string>
+    <string name="hint_future_years">Jangka Waktu (Tahun)</string>
+    <string name="btn_calc_inflation">Hitung Proyeksi Inflasi</string>
+    <string name="result_inflation">Nilai setara di masa depan (%1$d tahun lagi) dengan inflasi %2$.1f%%:\n%3$s</string>
+
+    <!-- Login dan Register -->
+    <string name="title_login">Masuk</string>
+    <string name="login_tagline">Masuk untuk mulai menabung</string>
+    <string name="title_register">Daftar Akun</string>
+    <string name="register_tagline">Buat akun baru di Celenganku</string>
+
+    <string name="hint_user">Nama pengguna</string>
+    <string name="hint_pass">Kata sandi</string>
+    <string name="hint_confirm">Ulangi kata sandi</string>
+
+    <string name="btn_login">Masuk</string>
+    <string name="btn_register">Daftar Sekarang</string>
+    <string name="link_to_register">Belum punya akun? Daftar</string>
+    <string name="link_to_login">Sudah punya akun? Masuk</string>
+    <string name="login_footer">Akun disimpan di HP ini saja dan tidak memakai internet.</string>
+
+    <string name="cd_show_password">Tampilkan kata sandi</string>
+    <string name="cd_hide_password">Sembunyikan kata sandi</string>
+
+    <string name="error_user_empty">Nama pengguna wajib diisi</string>
+    <string name="error_pass_empty">Kata sandi wajib diisi</string>
+    <string name="warn_no_account">Belum ada akun di HP ini. Silakan daftar dulu.</string>
+    <string name="warn_wrong_login">Nama pengguna atau kata sandi salah.</string>
+
+    <string name="warn_user_chars">Nama pengguna 4–20 karakter: hanya huruf, angka, dan garis bawah (_)</string>
+    <string name="warn_user_short">Nama pengguna minimal 4 karakter</string>
+    <string name="warn_user_exists">Nama pengguna sudah dipakai</string>
+    <string name="warn_pass_space">Peringatan: kata sandi tidak boleh mengandung spasi.</string>
+    <string name="warn_pass_incomplete">Peringatan: kata sandi belum memenuhi semua syarat di bawah.</string>
+    <string name="warn_pass_incomplete_short">Kata sandi belum memenuhi syarat</string>
+    <string name="warn_pass_mismatch">Kata sandi tidak sama</string>
+    <string name="msg_register_success">Akun berhasil dibuat. Silakan masuk.</string>
+
+    <string name="rules_title">Syarat kata sandi:</string>
+    <string name="rule_length">8 sampai 32 karakter</string>
+    <string name="rule_upper">Minimal 1 huruf besar (A–Z)</string>
+    <string name="rule_lower">Minimal 1 huruf kecil (a–z)</string>
+    <string name="rule_digit">Minimal 1 angka (0–9)</string>
+    <string name="rule_symbol">Minimal 1 simbol (contoh: ! @ # $ %)</string>
+
+    <string name="no_internet_title">Koneksi Internet Diperlukan</string>
+    <string name="no_internet_desc">Aplikasi Celenganku beroperasi secara online. Harap hidupkan Wi-Fi rumah atau data seluler Anda untuk melanjutkan.</string>
+    <string name="btn_retry">Coba Hubungkan Kembali</string>
+    <string name="cd_no_internet">Tidak ada internet</string>
+
+    <!-- Pengaturan & Tentang Aplikasi -->
+    <string name="title_settings">Pengaturan Lengkap</string>
+    <string name="settings_tagline">Pusat kontrol akun, preferensi, data, dan bantuan</string>
+
+    <string name="section_account">Akun &amp; Keamanan</string>
+    <string name="setting_change_pass">Ubah Kata Sandi Akun</string>
+    <string name="setting_logout">Keluar Akun (Logout)</string>
+
+    <string name="section_preferences">Preferensi &amp; Tampilan</string>
+    <string name="setting_currency">Mata Uang (Rupiah - IDR)</string>
+    <string name="setting_notifications">Notifikasi Pengingat Menabung</string>
+    <string name="setting_wifi_notif">Notifikasi Wi-Fi &amp; Koneksi Online</string>
+    <string name="setting_dark_mode">Mode Gelap (Dark Mode Otomatis)</string>
+    <string name="setting_sound">Suara &amp; Getar Interaksi</string>
+
+    <string name="section_data">Data &amp; Pencadangan</string>
+    <string name="setting_export">Ekspor Data Tabungan (JSON)</string>
+    <string name="setting_import">Impor Data Cadangan</string>
+    <string name="setting_clear_cache">Bersihkan Cache &amp; Riwayat Sementara</string>
+
+    <string name="section_support">Bantuan &amp; Dukungan</string>
+    <string name="setting_faq">Panduan Penggunaan (FAQ)</string>
+    <string name="setting_contact">Hubungi Pengembang (Support)</string>
+    <string name="setting_privacy">Kebijakan Privasi</string>
+    <string name="setting_update">Periksa Pembaruan Aplikasi</string>
+
+    <string name="section_about">Tentang Aplikasi Celenganku</string>
+    <string name="about_title">Celenganku Versi 2.0.1 Pro (Online)</string>
+    <string name="about_paragraph_1">Celenganku adalah aplikasi perencana keuangan modern dan komprehensif yang dirancang khusus untuk membantu masyarakat Indonesia dalam mengelola tabungan, merencanakan target keuangan masa depan, serta mengintegrasikan nilai-nilai spiritual dan sosial dalam pengelolaan rezeki.</string>
+    <string name="about_paragraph_2">Berbeda dari aplikasi celengan konvensional, Celenganku dilengkapi dengan berbagai fitur kalkulator finansial tingkat lanjut, mulai dari Simulasi Target Tabungan harian/mingguan/bulanan, Kalkulator Properti &amp; KPR Rumah, Perhitungan Yield Sewa, hingga analisis Dana Darurat dan Proyeksi Inflasi ekonomi keluarga.</string>
+    <string name="about_paragraph_3">Selain itu, aplikasi ini juga menghadirkan fitur khusus bernuansa Katolik dan rohani, seperti Celengan Aksi Puasa Pembangunan (APP) selama 40 hari Prapaskah, Kalkulator Persembahan &amp; Kolekte bulanan, serta perencanaan tabungan ziarah (Sendangsono, Gua Maria, Lourdes, Roma) dan persiapan Hari Raya Natal serta Paskah.</string>
+    <string name="about_paragraph_4">Dengan sistem berbasis online yang aman dan terenkripsi, Celenganku memastikan setiap catatan keuangan Anda tersinkronisasi dengan baik. Mari mulai menabung, merencanakan masa depan, dan berbagi kasih dengan sesama mulai hari ini.</string>
+
+    <!-- Halaman Tabungan Kristen -->
+    <string name="title_christian">Tabungan &amp; Persembahan Kristen</string>
+    <string name="desc_christian">Rencanakan tabungan dan persembahan sesuai kemampuan. Persembahan bersifat sukarela.</string>
+    <string name="btn_open_christian">Buka Tabungan Kristen</string>
+    <string name="christian_tagline">Berbagi dengan sukarela dan penuh kasih</string>
+    <string name="title_christian_offering">Kalkulator Persembahan</string>
+    <string name="desc_christian_offering">Tentukan persentase persembahan sesuai kerelaan hati, bukan kewajiban.</string>
+    <string name="hint_christian_income">Penghasilan (Rp)</string>
+    <string name="hint_christian_percent">Persentase sukarela (%)</string>
+    <string name="btn_calc_christian">Hitung Persembahan</string>
+    <string name="error_christian_income">Masukkan penghasilan lebih dari 0.</string>
+    <string name="error_christian_percent">Masukkan persentase antara 0 dan 100.</string>
+    <string name="result_christian">Rencana persembahan sukarela (%1$.1f%%): %2$s</string>
+
+    <!-- Halaman Celengan Keluarga / Kolaboratif -->
+    <string name="title_family">Celengan Impian Keluarga</string>
+    <string name="desc_family">Rencanakan target tabungan bersama keluarga atau pasangan tercinta.</string>
+    <string name="btn_open_family">Buka Celengan Keluarga</string>
+    <string name="family_tagline">Wujudkan impian bersama orang tersayang secara kolektif</string>
+    <string name="hint_family_target">Target Impian Bersama (Rp)</string>
+    <string name="hint_family_members">Jumlah Anggota Keluarga (Orang)</string>
+    <string name="btn_calc_family">Hitung Patungan Keluarga</string>
+    <string name="result_family">Target: %1$s oleh %2$d anggota (%3$d bulan)\n• Setoran Total per Bulan: %4$s\n• Tanggungan per Anggota / Bulan: %5$s</string>
+
+    <!-- Halaman Kuis Literasi Keuangan -->
+    <string name="title_quiz">Kuis Literasi Keuangan</string>
+    <string name="desc_quiz">Uji wawasan finansial Anda melalui kuis interaktif seputar pengelolaan uang.</string>
+    <string name="btn_open_quiz">Mulai Kuis Keuangan</string>
+    <string name="quiz_tagline">Asah pengetahuan finansial untuk masa depan yang lebih cerdas</string>
+    <string name="quiz_question_1">1. Berapa ideal persentase minimal penghasilan untuk ditabung setiap bulan?</string>
+    <string name="quiz_question_2">2. Apa fungsi utama dari Dana Darurat?</string>
+    <string name="quiz_question_3">3. Manakah metode menabung yang paling efektif?</string>
+    <string name="btn_submit_quiz">Kirim Jawaban &amp; Lihat Skor</string>
+    <string name="result_quiz">Skor Anda: %1$d / 100\nKategori: %2$s\nTips: Pertahankan kedisiplinan menabung dan kelola pengeluaran dengan bijak!</string>
+</resources>
