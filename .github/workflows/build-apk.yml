@@ -77,7 +77,7 @@ jobs:
       - name: Download Windows EXEs
         uses: actions/download-artifact@v4
         with:
-          name: Celenganku-Windows11
+          name: Celenganku-Windows11-Installer
           path: release-files
 
       - name: Create GitHub Release
@@ -88,11 +88,9 @@ jobs:
           body: |
             Build otomatis dari commit `${{ github.sha }}`.
 
-            File rilis:
-            File yang tersedia:
+                File tersedia:
             - `app-debug.apk`: aplikasi Android.
             - `Celenganku-Windows11.exe`: installer native Windows 11 satu file dengan aplikasi dan uninstaller tertanam.
-                    name: Celenganku-Windows11-Installer
           files: |
             release-files/app-debug.apk
             release-files/Celenganku-Windows11.exe
