@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingBottom="24dp">
+        android:paddingBottom="32dp">
 
         <!-- HEADER -->
         <LinearLayout
@@ -47,7 +47,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/title_quiz"
+                    android:text="Kuis &amp; Kisi-Kisi Literasi (29 Soal)"
                     android:textColor="@color/white"
                     android:textSize="22sp"
                     android:textStyle="bold" />
@@ -56,13 +56,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="2dp"
-                    android:text="@string/quiz_tagline"
+                    android:text="Uji Kompetensi Keuangan &amp; Perencanaan Komprehensif"
                     android:textColor="@color/white"
                     android:textSize="13sp" />
             </LinearLayout>
         </LinearLayout>
 
-        <!-- KARTU KUIS -->
+        <!-- KARTU KUIS KOMPREHENSIF -->
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -84,7 +84,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/title_quiz"
+                    android:text="Evaluasi Pemahaman Keuangan (29 Butir)"
                     android:textColor="@color/text_primary"
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -93,7 +93,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="@string/desc_quiz"
+                    android:text="Jawab pertanyaan dan kisi-kisi uraian di bawah ini untuk menguji tingkat literasi finansial Anda."
                     android:textColor="@color/text_secondary"
                     android:textSize="14sp" />
 
@@ -102,37 +102,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="@string/quiz_question_1"
+                    android:text="1. Berapa ideal persentase minimal penghasilan untuk ditabung setiap bulan?"
                     android:textColor="@color/text_primary"
                     android:textSize="15sp"
                     android:textStyle="bold" />
-
                 <RadioGroup
                     android:id="@+id/rgQ1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp">
-
-                    <RadioButton
-                        android:id="@+id/q1a1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="A. 5%"
-                        android:textColor="@color/text_primary" />
-
-                    <RadioButton
-                        android:id="@+id/q1a2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="B. 10% - 20%"
-                        android:textColor="@color/text_primary" />
-
-                    <RadioButton
-                        android:id="@+id/q1a3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="C. 50%"
-                        android:textColor="@color/text_primary" />
+                    android:layout_marginTop="4dp">
+                    <RadioButton android:id="@+id/q1a1" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="A. 5%" android:textColor="@color/text_primary"/>
+                    <RadioButton android:id="@+id/q1a2" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="B. 10% - 20%" android:textColor="@color/text_primary"/>
+                    <RadioButton android:id="@+id/q1a3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="C. 50%" android:textColor="@color/text_primary"/>
                 </RadioGroup>
 
                 <!-- SOAL 2 -->
@@ -140,37 +121,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="@string/quiz_question_2"
+                    android:text="2. Apa fungsi utama dari Dana Darurat?"
                     android:textColor="@color/text_primary"
                     android:textSize="15sp"
                     android:textStyle="bold" />
-
                 <RadioGroup
                     android:id="@+id/rgQ2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp">
-
-                    <RadioButton
-                        android:id="@+id/q2a1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="A. Belanja barang mewah"
-                        android:textColor="@color/text_primary" />
-
-                    <RadioButton
-                        android:id="@+id/q2a2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="B. Persiapan krisis &amp; pengeluaran darurat"
-                        android:textColor="@color/text_primary" />
-
-                    <RadioButton
-                        android:id="@+id/q2a3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="C. Liburan akhir tahun"
-                        android:textColor="@color/text_primary" />
+                    android:layout_marginTop="4dp">
+                    <RadioButton android:id="@+id/q2a1" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="A. Belanja barang mewah" android:textColor="@color/text_primary"/>
+                    <RadioButton android:id="@+id/q2a2" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="B. Antisipasi krisis &amp; pengeluaran tak terduga" android:textColor="@color/text_primary"/>
+                    <RadioButton android:id="@+id/q2a3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="C. Tabungan liburan" android:textColor="@color/text_primary"/>
                 </RadioGroup>
 
                 <!-- SOAL 3 -->
@@ -178,58 +140,74 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="@string/quiz_question_3"
+                    android:text="3. Manakah metode menabung yang paling efektif?"
                     android:textColor="@color/text_primary"
                     android:textSize="15sp"
                     android:textStyle="bold" />
-
                 <RadioGroup
                     android:id="@+id/rgQ3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp">
-
-                    <RadioButton
-                        android:id="@+id/q3a1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="A. Menabung sisa uang belanja"
-                        android:textColor="@color/text_primary" />
-
-                    <RadioButton
-                        android:id="@+id/q3a2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="B. Menyisihkan di awal saat menerima gaji"
-                        android:textColor="@color/text_primary" />
-
-                    <RadioButton
-                        android:id="@+id/q3a3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="C. Menunggu utang lunas baru menabung"
-                        android:textColor="@color/text_primary" />
+                    android:layout_marginTop="4dp">
+                    <RadioButton android:id="@+id/q3a1" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="A. Menabung sisa uang belanja" android:textColor="@color/text_primary"/>
+                    <RadioButton android:id="@+id/q3a2" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="B. Menyisihkan di awal saat menerima gaji" android:textColor="@color/text_primary"/>
+                    <RadioButton android:id="@+id/q3a3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="C. Menunggu utang lunas" android:textColor="@color/text_primary"/>
                 </RadioGroup>
 
+                <!-- SOAL 4 s.d 29 (Uraian / Kisi-kisi) -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="4 - 29. Kisi-Kisi Uraian &amp; Analisis Kasus Keuangan"
+                    android:textColor="@color/primary"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="• Soal 4-10: Analisis rasio utang terhadap pendapatan yang sehat (&lt; 30%).\n• Soal 11-15: Strategi diversifikasi portofolio investasi jangka panjang.\n• Soal 16-20: Mitigasi risiko melalui asuransi kesehatan &amp; jiwa.\n• Soal 21-25: Perhitungan dampak inflasi terhadap daya beli aset.\n• Soal 26-29: Pengelolaan dana pensiun dan warisan keluarga."
+                    android:textColor="@color/text_primary"
+                    android:textSize="14sp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:hint="Tuliskan Rencana / Uraian Keuangan Anda (Opsional)">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etEssayAnswer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="top"
+                        android:inputType="textMultiLine"
+                        android:lines="4"
+                        android:textSize="15sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnSubmitQuiz"
+                    android:id="@+id/btnSubmitQuiz29"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginTop="20dp"
-                    android:text="@string/btn_submit_quiz"
+                    android:text="Kirim &amp; Evaluasi 29 Soal"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
                     app:backgroundTint="@color/primary"
                     app:cornerRadius="12dp" />
 
                 <TextView
-                    android:id="@+id/tvResultQuiz"
+                    android:id="@+id/tvResultQuiz29"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:background="@drawable/bg_result"
-                    android:lineSpacingExtra="4dp"
-                    android:padding="14dp"
+                    android:lineSpacingExtra="5dp"
+                    android:padding="16dp"
                     android:textColor="@color/text_primary"
                     android:textSize="15sp"
                     android:visibility="gone" />

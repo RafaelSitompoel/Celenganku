@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Celenganku</string>
+    <string name="app_tagline">مخطط مالي وروحي ذكي</string>
+    <string name="title_target">محاكاة هدف التوفير</string>
+    <string name="desc_target">احسب الوقت الذي ستستغرقه للوصول إلى هدفك.</string>
+    <string name="hint_target">هدف التوفير</string>
+    <string name="hint_saldo">الرصيد الحالي (اختياري)</string>
+    <string name="hint_setoran">مبلغ الإيداع</string>
+    <string name="btn_hitung">احسب الآن</string>
+    <string name="btn_reset">مسح النموذج</string>
+    <string name="btn_back">رجوع</string>
+    <string name="title_login">مرحباً بعودتك</string>
+    <string name="hint_user">اسم المستخدم</string>
+    <string name="hint_pass">كلمة المرور</string>
+    <string name="btn_login">تسجيل الدخول</string>
+</resources>

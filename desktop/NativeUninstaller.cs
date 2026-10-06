@@ -4,8 +4,8 @@ using System.Drawing;
 using System.IO;
 using System.Security.Principal;
 using System.Windows.Forms;
-using Microsoft.VisualBasic.FileIO;
 using Microsoft.Win32;
+using Microsoft.VisualBasic.FileIO;
 
 namespace CelengankuNativeUninstaller
 {
@@ -72,15 +72,44 @@ namespace CelengankuNativeUninstaller
             }
             catch { }
 
+            bool uninstallCompleted = false;
             try
             {
-                FileSystem.DeleteDirectory(installDirectory, UIOption.OnlyErrorDialogs, RecycleOption.SendToRecycleBin);
-                RemoveShortcuts();
-                Registry.LocalMachine.DeleteSubKeyTree(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Celenganku", false);
+                MoveDirectoryToRecycleBin(installDirectory);
+                uninstallCompleted = true;
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Folder aplikasi tidak dapat dipindahkan ke Recycle Bin: " + ex.Message, "Uninstall gagal", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                DialogResult deletePermanently = MessageBox.Show(
+                    "Folder aplikasi tidak dapat dipindahkan ke Recycle Bin.\n\n" + ex.Message + "\n\nHapus permanen folder aplikasi? Data tabungan di AppData tetap aman.",
+                    "Recycle Bin tidak tersedia",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning);
+                if (deletePermanently == DialogResult.Yes)
+                {
+                    try
+                    {
+                        if (Directory.Exists(installDirectory)) Directory.Delete(installDirectory, true);
+                        uninstallCompleted = true;
+                    }
+                    catch (Exception deleteException)
+                    {
+                        MessageBox.Show("Folder aplikasi tidak dapat dihapus: " + deleteException.Message, "Uninstall gagal", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+
+            if (uninstallCompleted)
+            {
+                try
+                {
+                    RemoveShortcuts();
+                    Registry.LocalMachine.DeleteSubKeyTree(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Celenganku", false);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Aplikasi sudah dihapus, tetapi shortcut atau entri uninstall tidak dapat dibersihkan: " + ex.Message, "Pembersihan belum lengkap", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
 
             DeleteHelperAfterExit();
@@ -97,6 +126,13 @@ namespace CelengankuNativeUninstaller
                 UseShellExecute = false,
                 WindowStyle = ProcessWindowStyle.Hidden
             });
+        }
+
+        private static void MoveDirectoryToRecycleBin(string directoryPath)
+        {
+            if (!Directory.Exists(directoryPath)) return;
+            FileSystem.DeleteDirectory(directoryPath, UIOption.OnlyErrorDialogs, RecycleOption.SendToRecycleBin);
+            if (Directory.Exists(directoryPath)) throw new IOException("Folder instalasi masih ada setelah operasi Recycle Bin.");
         }
 
         private static bool IsAdministrator()

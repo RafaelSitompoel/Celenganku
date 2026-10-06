@@ -21,34 +21,11 @@ namespace CelengankuNative
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            while (true)
+            using (LoginForm loginForm = new LoginForm())
             {
-                if (!InternetProbe.IsAvailable())
-                {
-                    DialogResult retryInternet = MessageBox.Show(
-                        "Celenganku memerlukan koneksi internet. Periksa koneksi lalu pilih Coba Lagi.",
-                        "Koneksi internet diperlukan",
-                        MessageBoxButtons.RetryCancel,
-                        MessageBoxIcon.Warning);
-                    if (retryInternet != DialogResult.Retry) return;
-                    continue;
-                }
-
-                MaintenanceStatus maintenance;
-                if (!MaintenanceService.TryRead(out maintenance)) break;
-
-                if (maintenance.Enabled)
-                {
-                    string title = String.IsNullOrWhiteSpace(maintenance.Title) ? "Celenganku sedang maintenance" : maintenance.Title;
-                    string message = String.IsNullOrWhiteSpace(maintenance.Message) ? "Silakan coba lagi nanti." : maintenance.Message;
-                    DialogResult retryMaintenance = MessageBox.Show(message, title, MessageBoxButtons.RetryCancel, MessageBoxIcon.Information);
-                    if (retryMaintenance != DialogResult.Retry) return;
-                    continue;
-                }
-
-                break;
+                if (loginForm.ShowDialog() != DialogResult.OK) return;
+                Application.Run(new SavingsForm(loginForm.AuthenticatedUsername));
             }
-            Application.Run(new SavingsForm());
         }
     }
 
@@ -58,6 +35,7 @@ namespace CelengankuNative
         private static readonly Color Green = Color.FromArgb(0, 133, 97);
         private static readonly Color Canvas = Color.FromArgb(244, 247, 246);
         private readonly NativeDataStore store;
+        private readonly string currentUsername;
         private readonly DataGridView recentGrid;
         private readonly DataGridView transactionGrid;
         private readonly DataGridView goalGrid;
@@ -72,8 +50,9 @@ namespace CelengankuNative
         private int connectionCheckInProgress;
     private bool maintenanceWasActive;
 
-        public SavingsForm()
+        public SavingsForm(string username)
         {
+            currentUsername = username;
             store = new NativeDataStore();
             Text = "Celenganku - Tabungan Pribadi";
             StartPosition = FormStartPosition.CenterScreen;
@@ -122,6 +101,7 @@ namespace CelengankuNative
             Controls.Add(header);
 
             tabs = new TabControl { Dock = DockStyle.Fill, Padding = new Point(16, 8) };
+            tabs.Enabled = false;
             balanceValue = new Label();
             targetValue = new Label();
             savedValue = new Label();
@@ -145,6 +125,7 @@ namespace CelengankuNative
             Shown += delegate
             {
                 RefreshData();
+                connectionStatus.Text = "● Memeriksa server...";
                 connectivityTimer.Start();
                 CheckInternetInBackground();
             };
@@ -203,42 +184,99 @@ namespace CelengankuNative
 
         private TabPage BuildDashboardTab()
         {
-            TabPage page = CreatePage("Ringkasan");
-            FlowLayoutPanel metrics = new FlowLayoutPanel
+            TabPage page = CreatePage("Dashboard");
+            Panel intro = new Panel { Dock = DockStyle.Top, Height = 76, Padding = new Padding(18, 10, 18, 4) };
+            Label heading = new Label
+            {
+                Text = "Ringkasan keuangan",
+                Font = new Font("Segoe UI", 17F, FontStyle.Bold),
+                ForeColor = Ink,
+                Location = new Point(18, 8),
+                AutoSize = true
+            };
+            Label introText = new Label
+            {
+                Text = "Selamat datang, " + currentUsername + ". Pantau saldo dan target tabunganmu.",
+                Font = new Font("Segoe UI", 9.5F),
+                ForeColor = Color.FromArgb(89, 105, 113),
+                Location = new Point(20, 39),
+                AutoSize = true
+            };
+            intro.Controls.Add(heading);
+            intro.Controls.Add(introText);
+
+            TableLayoutPanel metrics = new TableLayoutPanel
             {
                 Dock = DockStyle.Top,
-                Height = 142,
-                Padding = new Padding(18, 18, 8, 8),
-                WrapContents = false
+                Height = 132,
+                Padding = new Padding(16, 8, 16, 8),
+                ColumnCount = 3,
+                RowCount = 1
             };
-            metrics.Controls.Add(CreateMetric("Saldo saat ini", balanceValue));
-            metrics.Controls.Add(CreateMetric("Total target", targetValue));
-            metrics.Controls.Add(CreateMetric("Terkumpul untuk target", savedValue));
+            metrics.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.33F));
+            metrics.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.33F));
+            metrics.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.34F));
+            metrics.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            metrics.Controls.Add(CreateMetric("Saldo saat ini", balanceValue, Green), 0, 0);
+            metrics.Controls.Add(CreateMetric("Total target", targetValue, Color.FromArgb(48, 112, 170)), 1, 0);
+            metrics.Controls.Add(CreateMetric("Terkumpul untuk target", savedValue, Color.FromArgb(199, 119, 54)), 2, 0);
 
-            FlowLayoutPanel actions = new FlowLayoutPanel
+            Panel actions = new Panel { Dock = DockStyle.Top, Height = 68, Padding = new Padding(18, 10, 18, 10) };
+            Label actionsTitle = new Label
             {
-                Dock = DockStyle.Top,
-                Height = 66,
-                Padding = new Padding(20, 8, 8, 8),
-                WrapContents = false
+                Text = "Aksi cepat",
+                Font = new Font("Segoe UI", 10F, FontStyle.Bold),
+                ForeColor = Color.FromArgb(89, 105, 113),
+                Location = new Point(18, 24),
+                AutoSize = true
             };
-            actions.Controls.Add(CreateButton("+ Setor", Green, delegate { AddTransaction(true); }));
-            actions.Controls.Add(CreateButton("- Tarik", Color.FromArgb(183, 73, 62), delegate { AddTransaction(false); }));
+            FlowLayoutPanel actionButtons = new FlowLayoutPanel
+            {
+                Dock = DockStyle.Right,
+                Width = 360,
+                FlowDirection = FlowDirection.RightToLeft,
+                WrapContents = false,
+                Padding = new Padding(0, 2, 0, 0)
+            };
+            actionButtons.Controls.Add(CreateButton("Kuis", Color.FromArgb(122, 89, 30), delegate { ShowQuiz(); }));
+            actionButtons.Controls.Add(CreateButton("Tarik saldo", Color.FromArgb(183, 73, 62), delegate { AddTransaction(false); }));
+            actionButtons.Controls.Add(CreateButton("Setor tabungan", Green, delegate { AddTransaction(true); }));
+            actions.Controls.Add(actionButtons);
+            actions.Controls.Add(actionsTitle);
 
+            Panel activityHeader = new Panel { Dock = DockStyle.Top, Height = 48, Padding = new Padding(18, 8, 18, 4) };
             Label recentTitle = new Label
             {
                 Text = "Transaksi terbaru",
-                Dock = DockStyle.Top,
-                Height = 38,
-                Padding = new Padding(22, 8, 0, 0),
                 Font = new Font("Segoe UI", 12F, FontStyle.Bold),
-                ForeColor = Ink
+                ForeColor = Ink,
+                Location = new Point(18, 12),
+                AutoSize = true
             };
+            Button viewAll = new Button
+            {
+                Text = "Semua transaksi  >",
+                FlatStyle = FlatStyle.Flat,
+                BackColor = Canvas,
+                ForeColor = Green,
+                Font = new Font("Segoe UI", 9F, FontStyle.Bold),
+                Size = new Size(150, 30),
+                Anchor = AnchorStyles.Top | AnchorStyles.Right,
+                Location = new Point(activityHeader.Width - 168, 7),
+                Cursor = Cursors.Hand
+            };
+            viewAll.FlatAppearance.BorderSize = 0;
+            viewAll.Click += delegate { tabs.SelectedIndex = 1; };
+            activityHeader.Resize += delegate { viewAll.Location = new Point(activityHeader.ClientSize.Width - viewAll.Width - 18, 7); };
+            activityHeader.Controls.Add(recentTitle);
+            activityHeader.Controls.Add(viewAll);
+
             recentGrid.Dock = DockStyle.Fill;
             page.Controls.Add(recentGrid);
-            page.Controls.Add(recentTitle);
+            page.Controls.Add(activityHeader);
             page.Controls.Add(actions);
             page.Controls.Add(metrics);
+            page.Controls.Add(intro);
             return page;
         }
 
@@ -392,6 +430,14 @@ namespace CelengankuNative
             RefreshData();
         }
 
+        private void ShowQuiz()
+        {
+            using (QuizForm quizForm = new QuizForm())
+            {
+                quizForm.ShowDialog(this);
+            }
+        }
+
         private void CreateBackup()
         {
             try
@@ -447,6 +493,7 @@ namespace CelengankuNative
                 AllowUserToAddRows = false,
                 AllowUserToDeleteRows = false,
                 AllowUserToResizeRows = false,
+                AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells,
                 AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill,
                 BackgroundColor = Color.White,
                 BorderStyle = BorderStyle.None,
@@ -471,15 +518,17 @@ namespace CelengankuNative
             return new TabPage(title) { BackColor = Canvas, Padding = new Padding(8) };
         }
 
-        private static Panel CreateMetric(string caption, Label value)
+        private static Panel CreateMetric(string caption, Label value, Color accent)
         {
-            Panel panel = new Panel { Width = 270, Height = 104, BackColor = Color.White, Margin = new Padding(0, 0, 14, 0) };
-            Label label = new Label { Text = caption, ForeColor = Color.FromArgb(89, 105, 113), Location = new Point(16, 14), AutoSize = true };
+            Panel panel = new Panel { Dock = DockStyle.Fill, BackColor = Color.White, Margin = new Padding(6, 4, 6, 4), Padding = new Padding(16, 12, 12, 8) };
+            Panel accentBar = new Panel { Dock = DockStyle.Left, Width = 5, BackColor = accent };
+            Label label = new Label { Text = caption, ForeColor = Color.FromArgb(89, 105, 113), Location = new Point(20, 13), AutoSize = true };
             value.Text = "Rp 0";
-            value.Font = new Font("Segoe UI", 17F, FontStyle.Bold);
+            value.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
             value.ForeColor = Ink;
-            value.Location = new Point(16, 44);
+            value.Location = new Point(20, 43);
             value.AutoSize = true;
+            panel.Controls.Add(accentBar);
             panel.Controls.Add(label);
             panel.Controls.Add(value);
             return panel;

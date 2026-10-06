@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
     <string name="app_name">Celenganku</string>
     <string name="app_tagline">Rencanakan tabunganmu dengan mudah</string>
 
@@ -247,7 +247,7 @@
     <string name="setting_update">Periksa Pembaruan Aplikasi</string>
 
     <string name="section_about">Tentang Aplikasi Celenganku</string>
-    <string name="about_title">Celenganku Versi 2.0.1 Pro (Online)</string>
+    <string name="about_title">Celenganku Versi 2.1.0 Pro (Online)</string>
     <string name="about_paragraph_1">Celenganku adalah aplikasi perencana keuangan modern dan komprehensif yang dirancang khusus untuk membantu masyarakat Indonesia dalam mengelola tabungan, merencanakan target keuangan masa depan, serta mengintegrasikan nilai-nilai spiritual dan sosial dalam pengelolaan rezeki.</string>
     <string name="about_paragraph_2">Berbeda dari aplikasi celengan konvensional, Celenganku dilengkapi dengan berbagai fitur kalkulator finansial tingkat lanjut, mulai dari Simulasi Target Tabungan harian/mingguan/bulanan, Kalkulator Properti &amp; KPR Rumah, Perhitungan Yield Sewa, hingga analisis Dana Darurat dan Proyeksi Inflasi ekonomi keluarga.</string>
     <string name="about_paragraph_3">Selain itu, aplikasi ini juga menghadirkan fitur khusus bernuansa Katolik dan rohani, seperti Celengan Aksi Puasa Pembangunan (APP) selama 40 hari Prapaskah, Kalkulator Persembahan &amp; Kolekte bulanan, serta perencanaan tabungan ziarah (Sendangsono, Gua Maria, Lourdes, Roma) dan persiapan Hari Raya Natal serta Paskah.</string>
@@ -287,4 +287,102 @@
     <string name="quiz_question_3">3. Manakah metode menabung yang paling efektif?</string>
     <string name="btn_submit_quiz">Kirim Jawaban &amp; Lihat Skor</string>
     <string name="result_quiz">Skor Anda: %1$d / 100\nKategori: %2$s\nTips: Pertahankan kedisiplinan menabung dan kelola pengeluaran dengan bijak!</string>
+    <string name="title_rumah">Investasi Rumah</string>
+    <string name="desc_rumah">Simulasi KPR, nilai rumah, dan imbal hasil sewa.</string>
+    <string name="title_bunga">Bunga Majemuk</string>
+    <string name="desc_bunga">Lihat tabungan atau deposito bertumbuh tiap tahun.</string>
+    <string name="title_inflasi">Kalkulator Inflasi</string>
+    <string name="desc_inflasi">Harga barang di masa depan dan nilai uangmu.</string>
+    <string name="title_darurat">Dana Darurat</string>
+    <string name="desc_darurat">Hitung target dana darurat sesuai kondisimu.</string>
+
+    <string name="btn_bersihkan">Bersihkan Isian</string>
+
+    <string name="hint_harga_rumah">Harga rumah</string>
+    <string name="hint_dp">Uang muka (DP)</string>
+    <string name="hint_bunga_kpr">Bunga KPR</string>
+    <string name="hint_tenor">Tenor KPR</string>
+    <string name="hint_kenaikan">Perkiraan kenaikan harga rumah</string>
+    <string name="hint_sewa">Sewa per bulan (opsional)</string>
+
+    <string name="error_harga_rumah">Masukkan harga rumah lebih dari 0</string>
+    <string name="error_dp">DP harus antara 0 sampai 90 persen</string>
+    <string name="error_bunga_kpr">Bunga harus antara 0 sampai 50 persen</string>
+    <string name="error_tenor">Tenor harus 1 sampai 40 tahun</string>
+    <string name="error_kenaikan">Kenaikan harus antara 0 sampai 50 persen</string>
+
+    <string name="label_untung">Estimasi keuntungan bersih</string>
+    <string name="label_rugi">Estimasi kerugian bersih</string>
+    <string name="result_rumah">Uang muka (DP): %1$s\nPokok pinjaman: %2$s\nCicilan per bulan: %3$s\nTotal bunga: %4$s\nTotal cicilan: %5$s\n\nPerkiraan nilai rumah setelah %6$s tahun: %7$s\nImbal hasil sewa per tahun: %8$s\nTotal sewa selama tenor: %9$s\n\n%10$s: %11$s</string>
+    <string name="footer_rumah">Belum termasuk pajak BPHTB, biaya notaris, provisi bank, dan biaya perawatan.</string>
+
+    <string name="hint_modal">Modal awal (opsional)</string>
+    <string name="hint_setoran_bulanan">Setoran per bulan (opsional)</string>
+    <string name="hint_bunga_tabungan">Bunga per tahun</string>
+    <string name="hint_lama_tahun">Lama menabung</string>
+
+    <string name="error_modal">Isi modal awal atau setoran per bulan</string>
+    <string name="error_bunga_tabungan">Bunga harus antara 0 sampai 100 persen</string>
+    <string name="error_lama_tahun">Lama menabung 1 sampai 60 tahun</string>
+
+    <string name="line_year">Tahun ke-%1$d: %2$s</string>
+    <string name="result_bunga">Total uang disetor: %1$s\nBunga yang didapat: %2$s\nNilai akhir: %3$s\n\nPerkembangan:\n%4$s</string>
+
+    <string name="hint_harga_barang">Harga barang hari ini</string>
+    <string name="hint_inflasi">Inflasi per tahun</string>
+    <string name="hint_tahun_inflasi">Lama waktu</string>
+
+    <string name="error_harga_barang">Masukkan harga lebih dari 0</string>
+    <string name="error_inflasi">Inflasi harus antara 0 sampai 50 persen</string>
+    <string name="error_tahun_inflasi">Lama waktu 1 sampai 50 tahun</string>
+
+    <string name="result_inflasi">Harga hari ini: %1$s\nHarga setelah %2$s tahun: %3$s\nKenaikan harga: %4$s\n\nUang sebesar %1$s setelah %2$s tahun hanya setara belanja senilai %5$s hari ini.</string>
+
+    <string name="hint_pengeluaran">Pengeluaran per bulan</string>
+    <string name="label_status">Kondisi kamu</string>
+    <string name="status_lajang_label">Lajang (6 kali pengeluaran)</string>
+    <string name="status_menikah_label">Menikah, belum punya anak (9 kali)</string>
+    <string name="status_keluarga_label">Berkeluarga dengan anak (12 kali)</string>
+    <string name="status_lajang">Lajang</string>
+    <string name="status_menikah">Menikah, belum punya anak</string>
+    <string name="status_keluarga">Berkeluarga dengan anak</string>
+    <string name="hint_saldo_darurat">Dana darurat saat ini (opsional)</string>
+    <string name="hint_setoran_darurat">Setoran per bulan (opsional)</string>
+
+    <string name="error_pengeluaran">Masukkan pengeluaran bulanan lebih dari 0</string>
+    <string name="result_darurat_target">Kondisi: %1$s\nSaran dana darurat: %2$s kali pengeluaran\nTarget dana darurat: %3$s\nDana saat ini: %4$s\nKekurangan: %5$s</string>
+    <string name="result_darurat_done">Selamat! Dana daruratmu sudah mencukupi.</string>
+    <string name="result_darurat_time">Dengan setoran %1$s per bulan, target tercapai dalam %2$s bulan (%3$s tahun %4$s bulan).</string>
+    <string name="result_darurat_too_long">Dengan setoran sekecil itu, target butuh lebih dari 100 tahun.</string>
+    <string name="result_darurat_hint">Isi setoran per bulan untuk melihat berapa lama target tercapai.</string>
+
+    <!-- Barcode & QR -->
+    <string name="title_barcode">Barcode dan QR</string>
+    <string name="desc_barcode">Pindai atau buat barcode dan QR Code.</string>
+
+    <string name="title_scan">Pindai Barcode / QR</string>
+    <string name="desc_scan">Arahkan kamera ke barcode produk atau QR Code untuk melihat isinya.</string>
+    <string name="btn_scan">Buka Kamera</string>
+    <string name="btn_copy">Salin Isi</string>
+    <string name="scan_prompt">Arahkan kamera ke barcode atau QR</string>
+    <string name="result_scan">Jenis: %1$s\nIsi:\n%2$s</string>
+    <string name="msg_scan_cancel">Pemindaian dibatalkan</string>
+    <string name="msg_copied">Isi barcode disalin</string>
+
+    <string name="title_buat">Buat Barcode / QR</string>
+    <string name="desc_buat">Ketik teks atau angka, lalu pilih jenis kodenya.</string>
+    <string name="hint_teks_barcode">Teks atau angka</string>
+    <string name="label_jenis">Jenis kode</string>
+    <string name="jenis_qr">QR Code (teks bebas)</string>
+    <string name="jenis_code128">Barcode Code 128 (huruf, angka, simbol)</string>
+    <string name="btn_buat">Buat Kode</string>
+    <string name="cd_barcode_image">Gambar barcode hasil buatan</string>
+
+    <string name="error_teks_kosong">Isi teks atau angka terlebih dahulu</string>
+    <string name="error_qr_panjang">QR Code maksimal %1$d karakter</string>
+    <string name="error_code_panjang">Code 128 maksimal %1$d karakter</string>
+    <string name="error_code_ascii">Code 128 hanya mendukung huruf latin, angka, dan simbol biasa</string>
+    <string name="error_buat_gagal">Kode gagal dibuat, coba ganti isinya</string>
+
+    <string name="footer_barcode">Isi barcode tidak dibuka otomatis dan tidak disimpan. Periksa dulu isinya sebelum membuka tautan.</string>
 </resources>

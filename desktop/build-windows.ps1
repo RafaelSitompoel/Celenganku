@@ -1,7 +1,7 @@
 $ErrorActionPreference = 'Stop'
 
 $projectDirectory = $PSScriptRoot
-$outputDirectory = Join-Path $projectDirectory 'release\no-maintenance-popup'
+$outputDirectory = Join-Path $projectDirectory 'release\recycle-bin-shell'
 $buildDirectory = Join-Path $projectDirectory 'build\native'
 $iconPath = Join-Path $projectDirectory 'app.ico'
 New-Item -ItemType Directory -Path $outputDirectory -Force | Out-Null
@@ -21,7 +21,7 @@ function Build-GuiExecutable {
     $parameters.GenerateExecutable = $true
     $parameters.OutputAssembly = $OutputPath
     $parameters.CompilerOptions = '/target:winexe /platform:anycpu /optimize+ /win32icon:"' + $Icon + '"'
-    foreach ($reference in @('System.dll', 'System.Core.dll', 'System.Drawing.dll', 'System.Windows.Forms.dll', 'Microsoft.CSharp.dll', 'Microsoft.VisualBasic.dll') + $References) {
+    foreach ($reference in @('System.dll', 'System.Core.dll', 'System.Drawing.dll', 'System.Windows.Forms.dll', 'Microsoft.CSharp.dll') + $References) {
         [void]$parameters.ReferencedAssemblies.Add($reference)
     }
     foreach ($resource in $Resources) {
@@ -45,7 +45,7 @@ $uninstallerExe = Join-Path $buildDirectory 'Uninstall-Celenganku.exe'
 $setupExe = Join-Path $outputDirectory 'Celenganku-Windows11.exe'
 
 Build-GuiExecutable `
-    -SourcePaths @((Join-Path $projectDirectory 'NativeSavingsApp.cs'), (Join-Path $projectDirectory 'AssemblyInfo.cs')) `
+    -SourcePaths @((Join-Path $projectDirectory 'NativeSavingsApp.cs'), (Join-Path $projectDirectory 'NativeAuth.cs'), (Join-Path $projectDirectory 'AssemblyInfo.cs')) `
     -OutputPath $appExe `
     -Icon $iconPath `
     -References @('System.Web.Extensions.dll', 'System.IO.Compression.dll', 'System.IO.Compression.FileSystem.dll')
@@ -53,7 +53,8 @@ Build-GuiExecutable `
 Build-GuiExecutable `
     -SourcePaths @((Join-Path $projectDirectory 'NativeUninstaller.cs'), (Join-Path $projectDirectory 'AssemblyInfo.cs')) `
     -OutputPath $uninstallerExe `
-    -Icon $iconPath
+    -Icon $iconPath `
+    -References @('Microsoft.VisualBasic.dll')
 
 Build-GuiExecutable `
     -SourcePaths @((Join-Path $projectDirectory 'NativeInstaller.cs'), (Join-Path $projectDirectory 'AssemblyInfo.cs')) `

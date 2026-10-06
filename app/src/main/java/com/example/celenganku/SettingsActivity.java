@@ -95,7 +95,11 @@ public class SettingsActivity extends AppCompatActivity {
 
         switchDarkMode.setOnCheckedChangeListener((buttonView, isChecked) -> {
             prefs.edit().putBoolean(KEY_DARK_MODE, isChecked).apply();
-            Toast.makeText(this, isChecked ? "Mode gelap diterapkan" : "Mode terang diterapkan", Toast.LENGTH_SHORT).show();
+            androidx.appcompat.app.AppCompatDelegate.setDefaultNightMode(
+                    isChecked ? androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_YES
+                            : androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_NO
+            );
+            Toast.makeText(this, isChecked ? "Mode gelap diaktifkan" : "Mode terang diaktifkan", Toast.LENGTH_SHORT).show();
         });
 
         switchSound.setOnCheckedChangeListener((buttonView, isChecked) -> {

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Celenganku</string>
+    <string name="app_tagline">Intelligenter Finanz- und Spiritualplaner</string>
+    <string name="title_target">Sparziel-Simulation</string>
+    <string name="desc_target">Berechnen Sie, wie lange es dauert, Ihr Ziel zu erreichen.</string>
+    <string name="hint_target">Sparziel</string>
+    <string name="hint_saldo">Aktueller Kontostand (optional)</string>
+    <string name="hint_setoran">Einzahlungsbetrag</string>
+    <string name="btn_hitung">Jetzt berechnen</string>
+    <string name="btn_reset">Formular leeren</string>
+    <string name="btn_back">Zurück</string>
+    <string name="title_login">Willkommen zurück</string>
+    <string name="hint_user">Benutzername</string>
+    <string name="hint_pass">Passwort</string>
+    <string name="btn_login">Anmelden</string>
+</resources>

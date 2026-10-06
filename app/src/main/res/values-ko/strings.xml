@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Celenganku</string>
+    <string name="app_tagline">스마트 금융 및 영적 플래너</string>
+    <string name="title_target">저축 목표 시뮬레이션</string>
+    <string name="desc_target">목표 달성까지 걸리는 시간을 계산합니다.</string>
+    <string name="hint_target">저축 목표</string>
+    <string name="hint_saldo">현재 잔액 (선택 사항)</string>
+    <string name="hint_setoran">입금 금액</string>
+    <string name="btn_hitung">지금 계산하기</string>
+    <string name="btn_reset">양식 지우기</string>
+    <string name="btn_back">뒤로</string>
+    <string name="title_login">다시 오신 것을 환영합니다</string>
+    <string name="hint_user">사용자 이름</string>
+    <string name="hint_pass">비밀번호</string>
+    <string name="btn_login">로그인</string>
+</resources>

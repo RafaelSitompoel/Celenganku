@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Celenganku</string>
+    <string name="app_tagline">Умный финансовый и духовный планировщик</string>
+    <string name="title_target">Моделирование цели сбережений</string>
+    <string name="desc_target">Рассчитайте время, необходимое для достижения цели.</string>
+    <string name="hint_target">Цель сбережений</string>
+    <string name="hint_saldo">Текущий баланс (необязательно)</string>
+    <string name="hint_setoran">Сумма депозита</string>
+    <string name="btn_hitung">Рассчитать сейчас</string>
+    <string name="btn_reset">Очистить форму</string>
+    <string name="btn_back">Назад</string>
+    <string name="title_login">С возвращением</string>
+    <string name="hint_user">Имя пользователя</string>
+    <string name="hint_pass">Пароль</string>
+    <string name="btn_login">Войти</string>
+</resources>

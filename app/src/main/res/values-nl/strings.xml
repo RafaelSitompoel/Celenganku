@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Celenganku</string>
+    <string name="app_tagline">Slimme financiële en spirituele planner</string>
+    <string name="title_target">Spaarndoelsimulatie</string>
+    <string name="desc_target">Bereken hoe lang het duurt om uw doel te bereiken.</string>
+    <string name="hint_target">Spardoel</string>
+    <string name="hint_saldo">Huidig saldo (optioneel)</string>
+    <string name="hint_setoran">Stortingsbedrag</string>
+    <string name="btn_hitung">Nu berekenen</string>
+    <string name="btn_reset">Formulier wis</string>
+    <string name="btn_back">Terug</string>
+    <string name="title_login">Welkom terug</string>
+    <string name="hint_user">Gebruikersnaam</string>
+    <string name="hint_pass">Wachtwoord</string>
+    <string name="btn_login">Inloggen</string>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Celenganku</string>
+    <string name="app_tagline">Perancang Kewangan &amp; Kerohanian Bijak</string>
+    <string name="title_target">Simulasi Sasaran Tabungan</string>
+    <string name="desc_target">Kira berapa lama sasaran tabungan anda akan dicapai.</string>
+    <string name="hint_target">Sasaran tabungan</string>
+    <string name="hint_saldo">Baki semasa (pilihan)</string>
+    <string name="hint_setoran">Jumlah simpanan</string>
+    <string name="btn_hitung">Kira Sekarang</string>
+    <string name="btn_reset">Padam Isian</string>
+    <string name="btn_back">Kembali</string>
+    <string name="title_login">Selamat Kembali</string>
+    <string name="hint_user">Nama Pengguna</string>
+    <string name="hint_pass">Kata Laluan</string>
+    <string name="btn_login">Log Masuk</string>
+</resources>

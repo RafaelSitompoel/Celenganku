@@ -114,7 +114,8 @@
                     android:hint="@string/hint_pass"
                     android:textColorHint="@color/text_secondary"
                     app:boxStrokeColor="@color/primary"
-                    app:endIconTint="@color/text_secondary"
+                    app:endIconMode="password_toggle"
+                    app:endIconTint="@color/primary"
                     app:hintTextColor="@color/primary"
                     app:startIconDrawable="@drawable/ic_lock"
                     app:startIconTint="@color/text_secondary">

@@ -43,6 +43,7 @@ namespace CelengankuNativeInstaller
         private readonly Label status;
         private readonly ProgressBar progress;
         private readonly Button installButton;
+        private bool launchAfterClose;
 
         public InstallerForm()
         {
@@ -72,6 +73,22 @@ namespace CelengankuNativeInstaller
             installButton = new Button { Text = "Pasang Celenganku", Location = new Point(31, 284), Size = new Size(476, 42), BackColor = Color.FromArgb(0, 133, 97), ForeColor = Color.White, FlatStyle = FlatStyle.Flat, Font = new Font("Segoe UI", 10F, FontStyle.Bold) };
             installButton.FlatAppearance.BorderSize = 0;
             installButton.Click += Install;
+            FormClosed += delegate
+            {
+                if (!launchAfterClose) return;
+                try
+                {
+                    Process.Start(new ProcessStartInfo
+                    {
+                        FileName = Path.Combine(installDirectory, "Celenganku.exe"),
+                        UseShellExecute = true
+                    });
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Celenganku tidak dapat dibuka: " + ex.Message, "Gagal membuka aplikasi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            };
             Controls.Add(title);
             Controls.Add(description);
             Controls.Add(installPath);
@@ -100,14 +117,8 @@ namespace CelengankuNativeInstaller
                 RegisterUninstall();
                 progress.Value = 100;
                 status.Text = "Pemasangan selesai.";
-                if (launchWhenDone.Checked)
-                    Process.Start(new ProcessStartInfo
-                    {
-                        FileName = "explorer.exe",
-                        Arguments = "\"" + Path.Combine(installDirectory, "Celenganku.exe") + "\"",
-                        UseShellExecute = true
-                    });
                 MessageBox.Show("Celenganku berhasil dipasang di:\n" + installDirectory + "\n\nData pengguna akan disimpan terpisah di AppData.", "Pemasangan selesai", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                launchAfterClose = launchWhenDone.Checked;
                 Close();
             }
             catch (Exception ex)

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Celenganku</string>
+    <string name="app_tagline">Smart Financial &amp; Spiritual Planner</string>
+    <string name="title_target">Savings Target Simulation</string>
+    <string name="desc_target">Calculate how long it will take to reach your savings target.</string>
+    <string name="hint_target">Savings target</string>
+    <string name="hint_saldo">Current balance (optional)</string>
+    <string name="hint_setoran">Deposit amount</string>
+    <string name="label_periode">Deposit period</string>
+    <string name="periode_harian_label">Daily</string>
+    <string name="periode_mingguan_label">Weekly</string>
+    <string name="periode_bulanan_label">Monthly</string>
+    <string name="btn_hitung">Calculate Now</string>
+    <string name="btn_reset">Clear Form</string>
+    <string name="btn_back">Back</string>
+    <string name="btn_skip">Skip</string>
+    <string name="splash_loading">Loading application...</string>
+    <string name="title_login">Welcome Back</string>
+    <string name="login_tagline">Sign in to your secure account</string>
+    <string name="hint_user">Username</string>
+    <string name="hint_pass">Password</string>
+    <string name="btn_login">Sign In</string>
+    <string name="link_to_register">Don\'t have an account? Register</string>
+    <string name="title_register">Create Account</string>
+    <string name="register_tagline">Join Celenganku Pro Online</string>
+    <string name="hint_confirm">Confirm Password</string>
+    <string name="btn_register">Register Account</string>
+    <string name="link_to_login">Already have an account? Sign In</string>
+</resources>

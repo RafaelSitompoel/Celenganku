@@ -49,7 +49,7 @@ jobs:
         shell: powershell
         run: |
           New-Item -ItemType Directory -Path release-files -Force | Out-Null
-          Copy-Item -LiteralPath 'desktop\release\no-maintenance-popup\Celenganku-Windows11.exe' -Destination 'release-files\Celenganku-Windows11.exe'
+          Copy-Item -LiteralPath 'desktop\release\recycle-bin-shell\Celenganku-Windows11.exe' -Destination 'release-files\Celenganku-Windows11.exe'
 
       - name: Upload Windows EXEs
         uses: actions/upload-artifact@v4

@@ -215,26 +215,62 @@ public class MainActivity extends AppCompatActivity {
             });
         }
 
+        View cardRumah = findViewById(R.id.cardRumah);
+        if (cardRumah != null) {
+            cardRumah.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, HouseCalculatorActivity.class)));
+        }
         MaterialButton btnRumah = findViewById(R.id.btnRumah);
         if (btnRumah != null) {
-            btnRumah.setOnClickListener(v -> {
-                Intent intent = new Intent(MainActivity.this, HouseCalculatorActivity.class);
+            btnRumah.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, HouseCalculatorActivity.class)));
+        }
+
+        View cardBunga = findViewById(R.id.cardBunga);
+        if (cardBunga != null) {
+            cardBunga.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, BungaActivity.class)));
+        }
+
+        View cardInflasi = findViewById(R.id.cardInflasi);
+        if (cardInflasi != null) {
+            cardInflasi.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, InflasiActivity.class)));
+        }
+
+        View cardDarurat = findViewById(R.id.cardDarurat);
+        if (cardDarurat != null) {
+            cardDarurat.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, DanaDaruratActivity.class)));
+        }
+
+        View cardQuiz = findViewById(R.id.cardQuiz);
+        if (cardQuiz != null) {
+            cardQuiz.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, QuizActivity.class)));
+        }
+
+        View cardFreedom = findViewById(R.id.cardFreedom);
+        if (cardFreedom != null) {
+            cardFreedom.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, FinancialFreedomActivity.class)));
+        }
+
+        View cardEducation = findViewById(R.id.cardEducation);
+        if (cardEducation != null) {
+            cardEducation.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, EducationSavingsActivity.class)));
+        }
+
+        View cardBarcode = findViewById(R.id.cardBarcode);
+        if (cardBarcode != null) {
+            cardBarcode.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, BarcodeActivity.class)));
+        }
+
+        MaterialButton btnCatholic = findViewById(R.id.btnCatholic);
+        if (btnCatholic != null) {
+            btnCatholic.setOnClickListener(v -> {
+                Intent intent = new Intent(MainActivity.this, CatholicPrapaskahActivity.class);
                 startActivity(intent);
             });
         }
 
-        MaterialButton btnKasih = findViewById(R.id.btnKasih);
-        if (btnKasih != null) {
-            btnKasih.setOnClickListener(v -> {
-                Intent intent = new Intent(MainActivity.this, FaithSavingsActivity.class);
-                startActivity(intent);
-            });
-        }
-
-        MaterialButton btnKristen = findViewById(R.id.btnKristen);
-        if (btnKristen != null) {
-            btnKristen.setOnClickListener(v -> {
-                Intent intent = new Intent(MainActivity.this, ChristianSavingsActivity.class);
+        MaterialButton btnProtestant = findViewById(R.id.btnProtestant);
+        if (btnProtestant != null) {
+            btnProtestant.setOnClickListener(v -> {
+                Intent intent = new Intent(MainActivity.this, ProtestantSavingsActivity.class);
                 startActivity(intent);
             });
         }

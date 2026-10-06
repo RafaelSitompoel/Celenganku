@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Celenganku</string>
+    <string name="app_tagline">Matalinong Tagaplano ng Pananalapi at Espiritual</string>
+    <string name="title_target">Simulasyon ng Layunin sa Pag-iipon</string>
+    <string name="desc_target">Kalkulahin kung gaano katagal bago maabot ang iyong layunin.</string>
+    <string name="hint_target">Layunin sa pag-iipon</string>
+    <string name="hint_saldo">Kasalukuyang balanse (opsyonal)</string>
+    <string name="hint_setoran">Halaga ng deposito</string>
+    <string name="btn_hitung">Kalkulahin Ngayon</string>
+    <string name="btn_reset">I-clear ang Form</string>
+    <string name="btn_back">Bumalik</string>
+    <string name="title_login">Maligayang Pagbabalik</string>
+    <string name="hint_user">Username</string>
+    <string name="hint_pass">Password</string>
+    <string name="btn_login">Mag-sign In</string>
+</resources>

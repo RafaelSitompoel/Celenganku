@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Celenganku</string>
+    <string name="app_tagline">智能财务与精神规划师</string>
+    <string name="title_target">储蓄目标模拟</string>
+    <string name="desc_target">计算达成目标所需的时间。</string>
+    <string name="hint_target">储蓄目标</string>
+    <string name="hint_saldo">当前余额（可选）</string>
+    <string name="hint_setoran">存款金额</string>
+    <string name="btn_hitung">立即计算</string>
+    <string name="btn_reset">清空表单</string>
+    <string name="btn_back">返回</string>
+    <string name="title_login">欢迎回来</string>
+    <string name="hint_user">用户名</string>
+    <string name="hint_pass">密码</string>
+    <string name="btn_login">登录</string>
+</resources>

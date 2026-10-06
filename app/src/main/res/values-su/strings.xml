@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Celenganku</string>
+    <string name="app_tagline">Rencana Keuangan &amp; Kerohanian Pinter</string>
+    <string name="title_target">Simulasi Target Tabungan</string>
+    <string name="desc_target">Pikawanoh sabaraha lila target tabungan anjeun bakal kahontal.</string>
+    <string name="hint_target">Target tabungan</string>
+    <string name="hint_saldo">Saldo ayeuna (pilihan)</string>
+    <string name="hint_setoran">Nominal setor</string>
+    <string name="btn_hitung">Itung Ayeuna</string>
+    <string name="btn_reset">Bersihkeun Isian</string>
+    <string name="btn_back">Muli</string>
+    <string name="title_login">Wilujeng Sumping Deui</string>
+    <string name="hint_user">Wasta Pangguna</string>
+    <string name="hint_pass">Kecap Sandi</string>
+    <string name="btn_login">Lébet</string>
+</resources>

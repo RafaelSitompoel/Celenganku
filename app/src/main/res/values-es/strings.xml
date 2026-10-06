@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Celenganku</string>
+    <string name="app_tagline">Planificador financiero y espiritual inteligente</string>
+    <string name="title_target">Simulación de objetivo de ahorro</string>
+    <string name="desc_target">Calcula cuánto tiempo tardará en alcanzar su objetivo.</string>
+    <string name="hint_target">Objetivo de ahorro</string>
+    <string name="hint_saldo">Saldo actual (opcional)</string>
+    <string name="hint_setoran">Monto de depósito</string>
+    <string name="btn_hitung">Calcular ahora</string>
+    <string name="btn_reset">Borrar formulario</string>
+    <string name="btn_back">Volver</string>
+    <string name="title_login">Bienvenido de nuevo</string>
+    <string name="hint_user">Usuario</string>
+    <string name="hint_pass">Contraseña</string>
+    <string name="btn_login">Iniciar sesión</string>
+</resources>

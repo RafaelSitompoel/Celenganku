@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Celenganku</string>
+    <string name="app_tagline">Perencana Keuangan lan Kerohanian Pinter</string>
+    <string name="title_target">Simulasi Target Celengan</string>
+    <string name="desc_target">Etung piro suwe target celengan sampeyan bakal tercapai.</string>
+    <string name="hint_target">Target celengan</string>
+    <string name="hint_saldo">Saldo saiki (pilihan)</string>
+    <string name="hint_setoran">Nominal setor</string>
+    <string name="btn_hitung">Etung Saiki</string>
+    <string name="btn_reset">Resiki Isian</string>
+    <string name="btn_back">Bali</string>
+    <string name="title_login">Sugeng Rawuh Maneh</string>
+    <string name="hint_user">Jeneng Pengguna</string>
+    <string name="hint_pass">Sandi</string>
+    <string name="btn_login">Mlebu</string>
+</resources>

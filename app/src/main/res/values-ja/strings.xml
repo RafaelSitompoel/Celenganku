@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Celenganku</string>
+    <string name="app_tagline">スマートな財務および精神的プランナー</string>
+    <string name="title_target">貯蓄目標シミュレーション</string>
+    <string name="desc_target">目標達成までの期間を計算します。</string>
+    <string name="hint_target">貯蓄目標</string>
+    <string name="hint_saldo">現在の残高（任意）</string>
+    <string name="hint_setoran">入金金額</string>
+    <string name="btn_hitung">今すぐ計算</string>
+    <string name="btn_reset">フォームをクリア</string>
+    <string name="btn_back">戻る</string>
+    <string name="title_login">おかえりなさい</string>
+    <string name="hint_user">ユーザー名</string>
+    <string name="hint_pass">パスワード</string>
+    <string name="btn_login">ログイン</string>
+</resources>
